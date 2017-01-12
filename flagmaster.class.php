@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    0.1 (2017-01-05)
+ * @version    0.2 (2017-01-13)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017-01-05
  * @license    Apache License, Version 2.0
@@ -24,7 +24,7 @@
 
 class flagMaster {
 
-  const VERSION = '0.1';
+  const VERSION = '0.2';
 
   #===================================================================
 
@@ -92,6 +92,7 @@ class flagMaster {
     $code = strtolower($code);
     $map = array(
       'uk' => 'gb',
+      'bq' => 'nl',
       'cw' => 'nl',
       'sx' => 'nl',
     );
