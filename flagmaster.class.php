@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    0.2 (2017-01-13)
+ * @version    0.4 (2017-01-23)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017-01-05
  * @license    Apache License, Version 2.0
@@ -24,11 +24,11 @@
 
 class flagMaster {
 
-  const VERSION = '0.2';
+  const VERSION = '0.4';
 
   #===================================================================
 
-  private function enclosedUnicode($char) {
+  private static function enclosedUnicode($char) {
     $arr = array(
       'a' => '1F1E6',
       'b' => '1F1E7',
@@ -71,11 +71,11 @@ class flagMaster {
    * @var string (2-letter code)
    *
    */
-  private function code2unicode($code) {
+  private static function code2unicode($code) {
     $arr = str_split($code);
     $str = '';
     foreach ($arr as $char) {
-      $str .= $this->enclosedUnicode($char);
+      $str .= self::enclosedUnicode($char);
     }
     return $str;
   }
@@ -88,8 +88,26 @@ class flagMaster {
    * @var string (one or more 2-letter codes)
    *
    */
-  public function emojiFlag($code) {
+  public static function emojiFlag($code) {
     $code = strtolower($code);
+    if (substr($code, 0, 1) == '_') {
+      # Certain flags don't exist or countries are occupied or not widely recognised.
+      $flag = array(
+        '_tibet'           => '🇨🇳',
+        '_basque-country'  => '🇪🇸',
+        '_northern-cyprus' => '🇨🇾',
+        '_south-ossetia'   => '🇷🇺',
+        '_scotland'        => '🇬🇧',
+        '_wales'           => '🇬🇧',
+        '_england'         => '🇬🇧',
+        '_commonwealth'    => '🇬🇧',
+        '_british-antarctic-territory' => '🇬🇧',
+      );
+      if (array_key_exists($code, $flag)) {
+        return $flag[$code];
+      }
+      return '🏴';
+    }
     $map = array(
       'uk' => 'gb',
       'bq' => 'nl',
@@ -112,7 +130,7 @@ class flagMaster {
         $str .= '🏴'; # black flag
       }
       else {
-        $str .= $this->code2unicode($val);
+        $str .= self::code2unicode($val);
       }
     }
     return $str;

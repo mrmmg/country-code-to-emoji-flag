@@ -4,12 +4,10 @@ Converts string of country codes to string of emoji flags. As an argument use a 
 ```php
 require 'flagmaster.class.php';
 
-$flag = new flagMaster;
-
 # Single flag
-echo $flag->emojiFlag('uk'); # 🇬🇧
+echo flagMaster::emojiFlag('uk'); # 🇬🇧
 
 # String of multiple flags
-echo $flag->emojiFlag('ukcwsxap'); # 🇬🇧🇳🇱🇳🇱🏴
+echo flagMaster::emojiFlag('ukcwsxap'); # 🇬🇧🇳🇱🇳🇱🏴
 
 ```
