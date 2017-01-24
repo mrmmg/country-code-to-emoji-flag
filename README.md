@@ -1,4 +1,4 @@
-#🗾 Country Code To Emoji Flag 🏁
+#🗾 Country Code To Emoji Flag 🇦🇺🇦🇱🇧🇪🇫🇷🇩🇰🇵🇱🇺🇦🇬🇧🇺🇸
 Converts string of country codes to string of emoji flags. As an argument use a single 2-letter country code or a string of multiple codes.
 
 ##❓ Why Emoji
