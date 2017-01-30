@@ -23,3 +23,6 @@ echo flagMaster::emojiFlag('uk'); # 🇬🇧
 echo flagMaster::emojiFlag('ukcwsxap'); # 🇬🇧🇳🇱🇳🇱🏴
 
 ```
+
+##Bonus Gift 🎁 -- SQL Emoji Flags
+Use the extra file `update-table-flags.sql` to insert emoji flags into your SQL table. Enjoy!
