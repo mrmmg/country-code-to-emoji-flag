@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    0.4 (2017-01-23)
+ * @version    0.5 (2017-01-30)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017-01-05
  * @license    Apache License, Version 2.0
@@ -24,7 +24,7 @@
 
 class flagMaster {
 
-  const VERSION = '0.4';
+  const VERSION = '0.5';
 
   #===================================================================
 
@@ -110,9 +110,6 @@ class flagMaster {
     }
     $map = array(
       'uk' => 'gb',
-      'bq' => 'nl',
-      'cw' => 'nl',
-      'sx' => 'nl',
     );
     # break into pairs
     $arr = array();
