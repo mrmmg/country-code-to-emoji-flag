@@ -20,7 +20,7 @@
 -- Edit table name, column name etc. as needed.
 --
 
-ALTER TABLE `countries` ADD COLUMN `flag` varchar(10) CHARACTER SET utf8mb4 NOT NULL after `code`;
+ALTER TABLE `countries` ADD COLUMN `flag` varchar(10) CHARACTER SET utf8mb4_bin NOT NULL after `code`;
 
 UPDATE `countries` SET `flag`='🇦🇩' WHERE `code`='ad';
 UPDATE `countries` SET `flag`='🇦🇪' WHERE `code`='ae';
