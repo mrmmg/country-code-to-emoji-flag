@@ -1,6 +1,8 @@
 #Country Code To Emoji Flag 🇦🇺🇦🇱🇧🇪🇫🇷🇩🇰🇵🇱🇺🇦🇬🇧🇺🇸
 Converts string of country codes to string of emoji flags. As an argument use a single 2-letter country code or a string of multiple codes.
 
+![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/screenshot-phpmyadmin-flags.png "Screenshot of emoji flags inside phpmyadmin table")
+
 ##Why Emoji
 Emoji symbol is a replacement for an image file. The image file is already present at your intended destination (a person's device), so why would you transmit the image to them again and again? -- Use emoji!
 
@@ -34,6 +36,3 @@ $link = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DBNAME);
 mysqli_set_charset($link, "utf8mb4");
 
 ```
-
-##Screenshot of emoji flags inside phpmyadmin table:
-![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/screenshot-phpmyadmin-flags.png "Screenshot")
