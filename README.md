@@ -34,3 +34,6 @@ $link = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DBNAME);
 mysqli_set_charset($link, "utf8mb4");
 
 ```
+
+##Screenshot of emoji flags inside phpmyadmin table:
+![image](https://github.com/peterkahl/country-code-to-emoji-flag/raw/master/src/common/images/icon48.png "Screenshot")
