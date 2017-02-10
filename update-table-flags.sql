@@ -124,6 +124,7 @@ UPDATE `countries` SET `flag`='🇭🇺' WHERE `code`='hu';
 UPDATE `countries` SET `flag`='🇮🇩' WHERE `code`='id';
 UPDATE `countries` SET `flag`='🇮🇪' WHERE `code`='ie';
 UPDATE `countries` SET `flag`='🇮🇱' WHERE `code`='il';
+UPDATE `countries` SET `flag`='🇮🇲' WHERE `code`='im';
 UPDATE `countries` SET `flag`='🇮🇳' WHERE `code`='in';
 UPDATE `countries` SET `flag`='🇮🇴' WHERE `code`='io';
 UPDATE `countries` SET `flag`='🇮🇶' WHERE `code`='iq';
