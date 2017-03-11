@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    0.6 (2017-01-30)
+ * @version    0.7 (2017-03-11)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017-01-05
  * @license    Apache License, Version 2.0
@@ -24,7 +24,7 @@
 
 class flagMaster {
 
-  const VERSION = '0.6';
+  const VERSION = '0.7';
 
   #===================================================================
 
@@ -106,6 +106,9 @@ class flagMaster {
       if (array_key_exists($code, $flag)) {
         return $flag[$code];
       }
+      return '🏴';
+    }
+    elseif ($code == 'unknown') {
       return '🏴';
     }
     $map = array(
