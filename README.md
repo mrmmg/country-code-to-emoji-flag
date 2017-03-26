@@ -1,7 +1,9 @@
 # Country Code To Emoji Flag 🇦🇺🇦🇱🇧🇪🇫🇷🇩🇰🇵🇱🇺🇦🇬🇧🇺🇸
 Converts string of country codes to string of emoji flags. As an argument use a single 2-letter country code or a string of multiple codes.
 
-![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/screenshot-phpmyadmin-flags.png "Screenshot of emoji flags inside phpmyadmin table")
+![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/screenshot-phpmyadmin-flags.png "Screenshot of emoji flags inside phpmyadmin table.")
+
+![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/logfile-example.png "Screenshot of emoji flags inside a log file.")
 
 ## Why Emoji
 Emoji symbol is a replacement for an image file. The image file is already present at your intended destination (a person's device), so why would you transmit the image to them again and again? -- Use emoji!
