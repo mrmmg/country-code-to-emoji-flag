@@ -6,7 +6,7 @@ Converts string of country codes to string of emoji flags. As an argument use a 
 ![image](https://github.com/peterkahl/country-code-to-emoji-flag/blob/master/logfile-example.png "Screenshot of emoji flags inside a log file.")
 
 ## Why Emoji
-Emoji symbol is a replacement for an image file. The image file is already present at your intended destination (a person's device), so why would you transmit the image to them again and again? -- Use emoji!
+Emoji symbol is a textual replacement for a graphic image file while having the benefits of a graphic image. The image file is already present at your intended destination (a person's device), so why would you transmit the image to them again and again? -- Use emoji!
 
 ## ♻ Green Technology ♻
 An image file equivalent to an emoji symbol may be tens, hundreds of kilobytes in size, while an emoji symbol is only several bytes. That's a bandwidth saving of around 10,000 times. If you use emoji instead of image files, you reduce your carbon footprint.
