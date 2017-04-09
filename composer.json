@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "flagMaster\\": "flagMaster"
+            "flagMaster\\": "src/flagMaster"
         }
     }
 }
