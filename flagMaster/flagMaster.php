@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    0.7 (2017-03-11)
+ * @version    0.8 (2017-04-08 23:51:00 GMT)
  * @author     Peter Kahl <peter.kahl@colossalmind.com>
  * @since      2017-01-05
  * @license    Apache License, Version 2.0
@@ -22,9 +22,11 @@
  * limitations under the License.
  */
 
+namespace flagMaster;
+
 class flagMaster {
 
-  const VERSION = '0.7';
+  const VERSION = '0.8';
 
   #===================================================================
 
