@@ -1,5 +1,5 @@
 {
-    "name": "peterkahl/flag-master",
+    "name": "peterkahl/country-code-to-emoji-flag",
     "description": "Converts string of country codes into string of emoji flags.",
     "homepage": "https://github.com/peterkahl/country-code-to-emoji-flag",
     "license": "Apache License Version 2.0",
