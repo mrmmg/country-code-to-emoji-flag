@@ -1,5 +1,6 @@
 {
     "name": "peterkahl/country-code-to-emoji-flag",
+    "type": "library",
     "description": "Converts string of country codes into string of emoji flags.",
     "keywords": ["country", "flag", "emoji"],
     "homepage": "https://github.com/peterkahl/country-code-to-emoji-flag",
