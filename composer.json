@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "flagMaster\\": "src/flagMaster"
+            "peterkahl\\flagMaster\\": "src/"
         }
     }
 }

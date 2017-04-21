@@ -22,7 +22,7 @@
  * limitations under the License.
  */
 
-namespace flagMaster;
+namespace peterkahl\flagMaster;
 
 class flagMaster {
 
