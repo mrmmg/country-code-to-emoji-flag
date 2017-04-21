@@ -18,7 +18,7 @@ Now you can include emoji in plain text files, even in plain text emails, making
 Not every platform (hardware + OS) supports emoji. Therefore, use with caution! To my knowledge, iOS, macOS, Android are capable of displaying emoji. Additionally, some platforms may not be able to display certain flags. If unsure, use this as a reference and easy way to test your platform: <http://unicode.org/emoji/charts/full-emoji-list.html>
 
 ```php
-use peterkahl\flagMaster;
+use peterkahl\flagMaster\flagMaster;
 
 # Single flag
 echo flagMaster::emojiFlag('uk'); # 🇬🇧
