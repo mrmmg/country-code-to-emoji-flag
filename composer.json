@@ -4,7 +4,7 @@
     "description": "Converts string of country codes into string of emoji flags.",
     "keywords": ["country", "flag", "emoji"],
     "homepage": "https://github.com/peterkahl/country-code-to-emoji-flag",
-    "license": "Apache License Version 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Peter Kahl",
