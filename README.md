@@ -1,6 +1,7 @@
 # Country Code To Emoji Flag 🇦🇺🇦🇱🇧🇪🇫🇷🇩🇰🇵🇱🇺🇦🇬🇧🇺🇸
 
 [![Downloads](https://img.shields.io/packagist/dt/peterkahl/country-code-to-emoji-flag.svg)](https://packagist.org/packages/peterkahl/country-code-to-emoji-flag)
+[![Download per Month](https://img.shields.io/packagist/dm/peterkahl/country-code-to-emoji-flag.svg)](https://packagist.org/packages/peterkahl/country-code-to-emoji-flag)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![If this project has business value for you then don't hesitate to support me with a small donation.](https://img.shields.io/badge/Donations-via%20Paypal-blue.svg)](https://www.paypal.me/PeterK93)
 
