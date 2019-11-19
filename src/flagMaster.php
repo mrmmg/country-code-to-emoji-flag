@@ -2,12 +2,11 @@
 /**
  * FLAG MASTER
  *
- * @version    0.9 (2017-04-28 01:31:00 GMT)
- * @author     Peter Kahl <peter.kahl@colossalmind.com>
- * @since      2017-01-05
+ * @version    2019-11-16 06:346:00 UTC
+ * @author     Peter Kahl <https://github.com/peterkahl>
  * @license    Apache License, Version 2.0
  *
- * Copyright 2017 Peter Kahl <peter.kahl@colossalmind.com>
+ * Copyright 2017-2019 Peter Kahl <https://github.com/peterkahl>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,12 +25,15 @@ namespace peterkahl\flagMaster;
 
 use \Exception;
 
+
 class flagMaster {
 
-  const VERSION = '0.9';
-
-  #===================================================================
-
+  /**
+   * Converts a character into enclosed unicode.
+   * @var    string    (one character)
+   * @throws \Exception
+   * @return string
+   */
   private static function enclosedUnicode($char) {
     $arr = array(
       'a' => '1F1E6',
@@ -65,15 +67,15 @@ class flagMaster {
     if (array_key_exists($char, $arr)) {
       return mb_convert_encoding('&#x'.$arr[$char].';', 'UTF-8', 'HTML-ENTITIES');
     }
-    throw new Exception('Invalid character '.$char);
+    throw new Exception("Invalid character $char");
   }
 
-  #===================================================================
 
   /**
    * Converts country code to emoji flag.
-   * @var string (2-letter code)
-   *
+   * @var    string    (2-letter code)
+   * @throws \Exception
+   * @return string
    */
   private static function code2unicode($code) {
     $arr = str_split($code);
@@ -84,37 +86,19 @@ class flagMaster {
     return $str;
   }
 
-  #===================================================================
 
   /**
    * Converts string of country codes to string of emoji flags.
    * Makes correction for codes that have no corresponding flag.
-   * @var string (one or more 2-letter codes)
-   *
+   * @var    string      (one or more 2-letter codes)
+   * @throws \Exception
+   * @return string
    */
   public static function emojiFlag($code) {
+    if (!is_string($code) || strlen($code) < 2) {
+      throw new Exception("Argument must be non-empty string");
+    }
     $code = strtolower($code);
-    if (substr($code, 0, 1) == '_') {
-      # Certain flags don't exist or countries are occupied or not widely recognised.
-      $flag = array(
-        '_tibet'           => '🇨🇳',
-        '_basque-country'  => '🇪🇸',
-        '_northern-cyprus' => '🇨🇾',
-        '_south-ossetia'   => '🇷🇺',
-        '_scotland'        => '🇬🇧',
-        '_wales'           => '🇬🇧',
-        '_england'         => '🇬🇧',
-        '_commonwealth'    => '🇬🇧',
-        '_british-antarctic-territory' => '🇬🇧',
-      );
-      if (array_key_exists($code, $flag)) {
-        return $flag[$code];
-      }
-      return '🏴';
-    }
-    elseif ($code == 'unknown') {
-      return '🏴';
-    }
     $map = array(
       'uk' => 'gb',
       'an' => 'nl',
@@ -141,6 +125,5 @@ class flagMaster {
     return $str;
   }
 
-  #===================================================================
 
 }
