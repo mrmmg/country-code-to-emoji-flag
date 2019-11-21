@@ -2,7 +2,7 @@
 /**
  * FLAG MASTER
  *
- * @version    2019-11-16 06:346:00 UTC
+ * @version    2019-11-21 05:49:00 UTC
  * @author     Peter Kahl <https://github.com/peterkahl>
  * @license    Apache License, Version 2.0
  *
@@ -27,6 +27,54 @@ use \Exception;
 
 
 class flagMaster {
+
+
+  /**
+   * Converts string of (one) country code to emoji flag (string).
+   * Makes correction for codes that have no corresponding flag.
+   * Most flags have 2-letter code, but some have more (eg England=gbeng,
+   * Scotland=gbsct, Wales=gbwls, etc.).
+   * @var    string      (one or more 2-letter codes)
+   * @throws \Exception
+   * @return string
+   */
+  public static function emojiFlag($code) {
+
+    if (!is_string($code) || strlen($code) < 2) {
+      throw new Exception("Argument must be non-empty string");
+    }
+
+    $code = strtolower($code);
+
+    $replacement = array(
+      'uk' => 'gb',
+      'an' => 'nl',
+      'ap' => 'un',
+    );
+
+    if (array_key_exists($code, $replacement)) {
+      $code = $replacement[$code];
+    }
+
+    return self::code2unicode($code);
+  }
+
+
+  /**
+   * Converts country (or region) code to emoji flag. One flag only!
+   * @var    string    (2 or more letter code)
+   * @throws \Exception
+   * @return string
+   */
+  private static function code2unicode($code) {
+    $arr = str_split($code);
+    $str = '';
+    foreach ($arr as $char) {
+      $str .= self::enclosedUnicode($char);
+    }
+    return $str;
+  }
+
 
   /**
    * Converts a character into enclosed unicode.
@@ -68,61 +116,6 @@ class flagMaster {
       return mb_convert_encoding('&#x'.$arr[$char].';', 'UTF-8', 'HTML-ENTITIES');
     }
     throw new Exception("Invalid character $char");
-  }
-
-
-  /**
-   * Converts country code to emoji flag.
-   * @var    string    (2-letter code)
-   * @throws \Exception
-   * @return string
-   */
-  private static function code2unicode($code) {
-    $arr = str_split($code);
-    $str = '';
-    foreach ($arr as $char) {
-      $str .= self::enclosedUnicode($char);
-    }
-    return $str;
-  }
-
-
-  /**
-   * Converts string of country codes to string of emoji flags.
-   * Makes correction for codes that have no corresponding flag.
-   * @var    string      (one or more 2-letter codes)
-   * @throws \Exception
-   * @return string
-   */
-  public static function emojiFlag($code) {
-    if (!is_string($code) || strlen($code) < 2) {
-      throw new Exception("Argument must be non-empty string");
-    }
-    $code = strtolower($code);
-    $map = array(
-      'uk' => 'gb',
-      'an' => 'nl',
-    );
-    # break into pairs
-    $arr = array();
-    $str = '';
-    while (strlen($code) > 0) {
-      $arr[] = substr($code, 0, 2);
-      $code  = substr($code, 2);
-    }
-    foreach ($arr as $k => $val) {
-      if (array_key_exists($val, $map)) {
-        $arr[$k] = $map[$val];
-        $val = $map[$val];
-      }
-      if ($val == 'ap' || $val == 'un') {
-        $str .= '🏴'; # black flag
-      }
-      else {
-        $str .= self::code2unicode($val);
-      }
-    }
-    return $str;
   }
 
 

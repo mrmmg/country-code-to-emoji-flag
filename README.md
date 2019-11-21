@@ -1,4 +1,4 @@
-# Country Code To Emoji Flag 🇦🇺🇦🇱🇧🇪🇫🇷🇩🇰🇵🇱🇺🇦🇬🇧🇺🇸
+# Country Code To Emoji Flag 🇬🇧
 
 [![Downloads](https://img.shields.io/packagist/dt/peterkahl/country-code-to-emoji-flag.svg)](https://packagist.org/packages/peterkahl/country-code-to-emoji-flag)
 [![Download per Month](https://img.shields.io/packagist/dm/peterkahl/country-code-to-emoji-flag.svg)](https://packagist.org/packages/peterkahl/country-code-to-emoji-flag)
@@ -28,21 +28,9 @@ Not every platform (hardware + OS) supports emoji. Therefore, use with caution! 
 ```php
 use peterkahl\flagMaster\flagMaster;
 
-# Single flag
-echo flagMaster::emojiFlag('uk'); # 🇬🇧
-
-# String of multiple flags
-echo flagMaster::emojiFlag('ukcwsxap'); # 🇬🇧🇳🇱🇳🇱🏴
-
-```
-
-## Bonus Gift 🎁 -- SQL Emoji Flags
-Use the extra file `update-table-flags.sql` to insert emoji flags into your SQL table. Make sure to use the following settings:
-
-```php
-
-$link = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DBNAME);
-
-mysqli_set_charset($link, "utf8mb4");
+echo flagMaster::emojiFlag('uk');    # 🇬🇧
+echo flagMaster::emojiFlag('gbwls'); # 🏴󠁧󠁢󠁷󠁬󠁳󠁿
+echo flagMaster::emojiFlag('gbsct'); # 🏴󠁧󠁢󠁳󠁣󠁴󠁿
+echo flagMaster::emojiFlag('gbeng'); # 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 
 ```
